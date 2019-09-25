@@ -170,12 +170,15 @@ p {
   margin: 0 auto;
 }
 .navigation {
-  margin-top: 50px;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
   color: black;
   width: 100%;
 }
-@media (max-width:700px) {
+.navigation img {
+  margin-left: 100px;
+}
+@media (max-width:800px) {
   .navigation {
     display: flex;
     margin-bottom: 2px;
@@ -190,7 +193,7 @@ p {
   letter-spacing: 2px;
   border-radius: 10px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .navigation h1 {
     margin-top: 80px;
     margin-left: 20px;
@@ -203,13 +206,14 @@ p {
 }
 .navigation .top {
   display: flex;
-  width: 70%;
-  margin-left: 30%;
+  width: 50%;
   font-family: cursive;
   font-weight: bolder;
   font-size: 20px;
+  margin: 0 auto;
+  padding: 10px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .navigation .top {
     display: flex;
     flex-direction: column;
@@ -223,7 +227,7 @@ p {
   text-decoration: none;
   font-family: 'Heebo', sans-serif;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .navigation .top a {
     margin: 10px;
     margin-left: 50px;
@@ -243,7 +247,7 @@ p {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 10px;
   margin-bottom: 50px;
   width: 70%;
   height: 100%;
@@ -253,7 +257,7 @@ p {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole article {
     background-color: antiquewhite;
     width: 90%;
@@ -265,7 +269,7 @@ p {
   font-weight: 900px;
   color: brown;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole article h2 {
     color: black;
   }
@@ -276,7 +280,7 @@ p {
   font-weight: 900;
   color: brown;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole article p {
     box-sizing: border-box;
     padding: 20px;
@@ -293,7 +297,7 @@ p {
   margin: 0 auto;
   size: 200px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole article .sign_up {
     display: flex;
     flex-direction: column;
@@ -313,7 +317,7 @@ p {
   padding: 10px;
   margin: 20px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole article .sign_up button {
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -334,8 +338,9 @@ p {
   height: 90%;
   color: wheat;
   font-weight: 900;
+  opacity: 1;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole .news {
     display: flex;
     flex-direction: column;
@@ -349,16 +354,17 @@ p {
 .whole .news section {
   width: 200px;
   height: 200px;
-  text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
   border-radius: 6px;
 }
-.whole .news section span {
-  color: white;
+.whole .news section #names {
+  color: black;
   opacity: 0.8;
+  position: absolute;
+  bottom: 80px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .whole .news section {
     margin: 10px;
   }
@@ -367,32 +373,61 @@ p {
   background-image: url("https://images.unsplash.com/photo-1508855173839-a6d69c12573a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
 }
+.whole .news .flip3D {
+  background-color: #DDD;
+  position: relative;
+  z-index: 1;
+}
 .whole .news #firstpic_of {
-  background-image: url("https://images.unsplash.com/photo-1501876991173-f9c47cd28268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1006&q=80");
+  background-image: url("../img/Emma.png");
   background-size: cover;
 }
-.whole .news #secondpic {
+.whole .news .front {
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: transform 0.7s linear 0s;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+.whole .news .front:hover {
+  transform: perspective(600px) rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.whole .news .back {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.whole .news .back:hover {
+  display: block;
+}
+.whole #secondpic {
   background-image: url("https://images.unsplash.com/photo-1535219241072-7d3c28a49a5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1048&q=80");
   background-size: cover;
 }
-.whole .news #secondpic_of {
-  background-image: url("https://images.unsplash.com/photo-1562184552-11a7e638b6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
+.whole #secondpic_of {
+  background-image: url("../img/Julie.png");
   background-size: cover;
 }
-.whole .news #thirdpic {
+.whole #thirdpic {
   background-image: url("https://images.unsplash.com/photo-1533856797653-6f6dbf370efc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
 }
-.whole .news #thirdpic_of {
-  background-image: url("https://images.unsplash.com/photo-1510148199876-8a856ee41d42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+.whole #thirdpic_of {
+  background-image: url("../img/bilgun.png");
   background-size: cover;
 }
-.whole .news #forthpic {
+.whole #forthpic {
   background-image: url("https://images.unsplash.com/photo-1554966681-3fc9da8ed38d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
   background-size: cover;
 }
-.whole .news #forthpic_of {
-  background-image: url("https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+.whole #forthpic_of {
+  background-image: url("../img/Akere.png");
+  background-size: cover;
+}
+.whole #fithpic_of {
+  background-image: url("../img/Shannon.png");
   background-size: cover;
 }
 .footer {
@@ -402,7 +437,7 @@ p {
   font-family: cursive;
   padding: 30px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -424,7 +459,7 @@ p {
   color: black;
   padding-right: 20px;
 }
-@media (max-width:700px) {
+@media (max-width:800px) {
   .footer #endofpage #tag {
     display: none;
   }

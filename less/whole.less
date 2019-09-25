@@ -9,7 +9,7 @@
     .custom-layout(column,center);
 
     margin: 0 auto;
-    margin-top: 90px; 
+    margin-top: 10px; 
     margin-bottom: 50px;  
     width: 70%;
     height:100%;
@@ -126,7 +126,10 @@ button:hover  {
     height: 90%;
     color:wheat;
     font-weight: 900;
+    opacity: 1;
     
+    
+
     
 
 
@@ -141,32 +144,47 @@ button:hover  {
 
     }
 
+   
+
+
 
     section {
     
         @main-border-color: @border-real;
         width: 200px;
         height: 200px;
-        text-align: center;
+        // text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 20px;
         border-radius: 6px;
-
-        span{
-            color:white;
-            opacity: 0.8;
-            
-           
+      
+       
         
+    
+
+
+        #names {
+            // border:2px blue solid;
+            color: black;
+            opacity: 0.8;
+            position: absolute;
+            // width: 50%;
+            bottom:80px;
+            
+            
         }
 
 
         @media @mobile {
             margin:10px;
         }
+
+
        
 
+
     }
+          
 
 
     #firstpic {
@@ -175,13 +193,91 @@ button:hover  {
         
         
         
+        
     }
+
+   
+    .flip3D {
+        background-color: #DDD;
+        position: relative;
+        z-index: 1;
+    
+}
+
 
     #firstpic_of {
-        background-image: url("https://images.unsplash.com/photo-1501876991173-f9c47cd28268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1006&q=80");
+        
+        background-image: url("../img/Emma.png");
         background-size: cover;
+       
 
     }
+
+       
+
+    .front {
+        
+        transform:perspective(600px) rotateY(0deg);
+        backface-visibility: hidden;
+        transition: transform 0.7s linear 0s;
+        transform-style: preserve-3d;
+        z-index: 10;
+       
+       
+
+    }
+
+
+
+
+    .front:hover {
+        
+        transform:perspective(600px) rotateY(-180deg);
+        transform-style: preserve-3d;
+        
+
+
+        
+            
+    }
+
+    
+
+
+    .back {
+      
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        
+
+
+
+
+
+    }
+
+
+
+    .back:hover {
+        display:block;
+        // z-index: 10;
+        // height: 300px;
+        // width: 300px;
+        // transform:perspective(600px) rotateY(0deg);
+        // background-color:red;
+        // text-align: center;
+        // transform-style: preserve-3d;
+        // backface-visibility: visible;
+        // transition: transform 0.5s linear 0s;
+
+    }
+
+}
+
+    
+
 
 
 
@@ -194,9 +290,11 @@ button:hover  {
 
     #secondpic_of { 
 
-        background-image: url("https://images.unsplash.com/photo-1562184552-11a7e638b6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
+        background-image: url("../img/Julie.png");
         background-size: cover;
     }
+   
+  
 
 
     #thirdpic {
@@ -207,9 +305,10 @@ button:hover  {
 
     #thirdpic_of {
 
-            background-image:url("https://images.unsplash.com/photo-1510148199876-8a856ee41d42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
-           
+            background-image:url("../img/bilgun.png");  
             background-size: cover;
+           
+            
 
             }
         
@@ -219,37 +318,23 @@ button:hover  {
         }
 
      #forthpic_of { 
-            background-image: url("https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-image: url("../img/Akere.png");
             background-size: cover;
+        }
+
+        #fithpic_of {
+            background-image: url("../img/Shannon.png");
+            background-size: cover;
+
         }
 
     
 
+      
+
     }
 
-
-    // .people {
-    //     border: 2px black solid;
-    // .custom-layout(row, space-evenly);
-    // align-items:center;
-    // flex-wrap: nowrap;
-    // // margin: 0 auto;
-    // margin-left: 150px;
-    // width:70%;
-    // height: 100%;
-    // color:wheat;
-    // font-weight: 900;
-
-    // @media @mobile {
-
-    //     display: none;
-
-
-    // }
-
-
-
-    // }
+    
 
 
 
@@ -257,7 +342,9 @@ button:hover  {
 
 
 
- }
+
+
+ 
 
 
 
