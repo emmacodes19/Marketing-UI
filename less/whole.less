@@ -1,0 +1,350 @@
+
+
+
+.whole {
+
+
+    article {
+
+    .custom-layout(column,center);
+
+    margin: 0 auto;
+    margin-top: 10px; 
+    margin-bottom: 50px;  
+    width: 70%;
+    height:100%;
+    @header-font-color: @ebony-clay;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-stretch: wider;
+    font-style: italic;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    
+    
+   
+
+
+    @media @mobile {
+        background-color: antiquewhite;
+        width: 90%;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+   
+
+
+h2 {
+
+    text-align: center;
+    font-weight:900px;
+    color: brown;
+
+    
+
+    @media @mobile {
+        color:black;
+    }
+
+
+}
+
+
+
+
+p  {
+    
+    text-align: center;
+    line-height: 2;
+    font-weight:900;
+    color:brown;
+
+
+    @media @mobile {
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.4;
+    color: black;
+    font-weight: 300;
+    font-size: 1.6rem;
+    }
+      
+    
+}
+ 
+
+ .sign_up {
+     .custom-layout(row, space-between);
+    margin: 0 auto;
+    size: 200px;
+    
+    @media @mobile {
+    .custom-layout(column, center);
+    margin: auto auto;
+
+    }
+
+
+  button {
+    .custom-btn(coral, 200px, black);
+    margin: 20px;
+    @media @mobile {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #bc5a45;
+    
+    
+} 
+
+
+
+}
+
+
+button:hover  {
+    background-color:#f18973;
+    @header-font-color: @ebony-clay;
+    
+           }
+    
+        
+        
+        }
+ 
+ 
+ 
+    }
+
+    
+
+
+.news {
+    .custom-layout(row, space-evenly);
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width:100%;
+    height: 90%;
+    color:wheat;
+    font-weight: 900;
+    opacity: 1;
+    
+    
+
+    
+
+
+    @media @mobile {
+
+        .custom-layout(column, space-evenly);
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: auto;
+        margin-top: none;
+
+
+    }
+
+   
+
+
+
+    section {
+    
+        @main-border-color: @border-real;
+        width: 200px;
+        height: 200px;
+        // text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        border-radius: 6px;
+      
+       
+        
+    
+
+
+        #names {
+            // border:2px blue solid;
+            color: black;
+            opacity: 0.8;
+            position: absolute;
+            // width: 50%;
+            bottom:80px;
+            
+            
+        }
+
+
+        @media @mobile {
+            margin:10px;
+        }
+
+
+       
+
+
+    }
+          
+
+
+    #firstpic {
+        background-image: url("https://images.unsplash.com/photo-1508855173839-a6d69c12573a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+        background-size: cover;
+        
+        
+        
+        
+    }
+
+   
+    .flip3D {
+        background-color: #DDD;
+        position: relative;
+        z-index: 1;
+    
+}
+
+
+    #firstpic_of {
+        
+        background-image: url("../img/Emma.png");
+        background-size: cover;
+       
+
+    }
+
+       
+
+    .front {
+        
+        transform:perspective(600px) rotateY(0deg);
+        backface-visibility: hidden;
+        transition: transform 0.7s linear 0s;
+        transform-style: preserve-3d;
+        z-index: 10;
+       
+       
+
+    }
+
+
+
+
+    .front:hover {
+        
+        transform:perspective(600px) rotateY(-180deg);
+        transform-style: preserve-3d;
+        
+
+
+        
+            
+    }
+
+    
+
+
+    .back {
+      
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        
+
+
+
+
+
+    }
+
+
+
+    .back:hover {
+        display:block;
+        // z-index: 10;
+        // height: 300px;
+        // width: 300px;
+        // transform:perspective(600px) rotateY(0deg);
+        // background-color:red;
+        // text-align: center;
+        // transform-style: preserve-3d;
+        // backface-visibility: visible;
+        // transition: transform 0.5s linear 0s;
+
+    }
+
+}
+
+    
+
+
+
+
+    #secondpic { 
+
+        background-image: url("https://images.unsplash.com/photo-1535219241072-7d3c28a49a5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1048&q=80");
+        
+        background-size: cover;
+    }
+
+    #secondpic_of { 
+
+        background-image: url("../img/Julie.png");
+        background-size: cover;
+    }
+   
+  
+
+
+    #thirdpic {
+        
+        background-image:url("https://images.unsplash.com/photo-1533856797653-6f6dbf370efc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+        background-size: cover;
+        }
+
+    #thirdpic_of {
+
+            background-image:url("../img/bilgun.png");  
+            background-size: cover;
+           
+            
+
+            }
+        
+     #forthpic { 
+            background-image: url("https://images.unsplash.com/photo-1554966681-3fc9da8ed38d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+            background-size: cover;
+        }
+
+     #forthpic_of { 
+            background-image: url("../img/Akere.png");
+            background-size: cover;
+        }
+
+        #fithpic_of {
+            background-image: url("../img/Shannon.png");
+            background-size: cover;
+
+        }
+
+    
+
+      
+
+    }
+
+    
+
+
+
+
+
+
+
+
+
+ 
+
+
+
